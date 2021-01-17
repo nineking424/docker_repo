@@ -20,4 +20,4 @@ ENTRYPOINT ["python", "./app.py"]
 # docker pull nineking424/csvdown
 # docker run --rm -v ~/csvdown:/data nineking424/csvdown -o /data
 # docker run --name csvdown -v ~/csvdown:/data nineking424/csvdown -o /data
-# docker start csvdown
+# docker start -i csvdown
