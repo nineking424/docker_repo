@@ -36,7 +36,8 @@ yesterday = (utcnow - oneday).strftime('%Y%m%d')
 # options(default)
 out_dir = '.'
 target = yesterday
-target_url = join(url,'quote')
+target_type = 'quote'
+target_url = join(url,target_type)
 
 # get parameters
 for i,arg in enumerate(sys.argv):
@@ -45,7 +46,7 @@ for i,arg in enumerate(sys.argv):
     if arg.startswith('--target') or arg.startswith('-t'):
         target = sys.argv[i+1]
     if arg.startswith('--data') or arg.startswith('-d'):
-        target_url = join(sys.argv[i+1],'quote')
+        target_url = join(sys.argv[i+1],target_type)
 
 # error check
 if not os.path.isdir(out_dir):
